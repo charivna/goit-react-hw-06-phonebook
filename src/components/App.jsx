@@ -18,18 +18,18 @@ export const App = () => {
   const [filter, setFilter] = useState('');
 
   const createContact = data => {
-    const contact = {
+    return {
       ...data,
       id: nanoid(),
     };
 
-    setContacts(contacts => {
-      if (contacts.some(contact => contact.name === data.name)) {
-        alert(`${data.name} is already in contacts!`);
-        return contacts;
-      }
-      return [contact, ...contacts];
-    });
+    // setContacts(contacts => {
+    //   if (contacts.some(contact => contact.name === data.name)) {
+    //     alert(`${data.name} is already in contacts!`);
+    //     return contacts;
+    //   }
+    //   return [contact, ...contacts];
+    // });
   };
 
   useEffect(() => {
